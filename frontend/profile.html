@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./styles/profile.css">
+    <title>Document</title>
+</head>
+<body class="super-container"  id='body'>
+    
+    <div class="middle-container"> <!-- middle container to show the profile information -->
+        <div class="background-container"> <!-- background image-->
+            <div class="edit-profile-info"> <!-- edit icon-->
+                <img src="./images/edit-solid.svg" alt="" id="edit-bg">
+                <input type="file" name="backgroundFile" id="backgroundUpload" accept="image/*" style="display: none" >
+            </div>
+            <img src="./images/background_image.jpg" alt="" id="background-image">
+            <div class="profile-image" > <!-- profile image-->
+                <img src=".\images\twitter.png" alt="" id="profile-image">
+                <input type="file" name="profileFile" id="profilepicUpload" accept="image/*" style="display: none" >
+            </div>
+        </div>
+        <div class="personal-info"> <!-- division for the personal information-->
+            <div class="edit-profile-info"> <!-- edit profile icon-->
+                <img src="./images/edit-solid.svg" alt="" >
+            </div>
+            <div class="profile-name"> 
+                <h1 id="first-name">FirstName</h1><h1 id="last-name">LastName</h1> <!-- first name and last name to be fetched from backend-->
+            </div>
+            <div class="profile-title">
+                <h2>Currently doing </h2>
+                <h2 id="title-2">Web Development</h2> <!-- profile title1 to be fetched from backend-->
+                <h2>at</h2>
+                <h2 id="title-1">Kuliza</h2> <!-- profile title2 to be fetched from backend-->
+            </div>
+        </div>
+        <div class="profile-details"> <!-- division for the profile-details details -->
+            <div class="add-profile-details"> <!-- to add more profile-details details icon-->
+                <img src="./images/add.svg" alt="" >
+            </div>
+            <h2>Education</h2> 
+            <ul class="profile-details-list" id="education description">
+                <li> <!-- list items to be fetched from the backend -->
+                    <div class="edit-profile-details"> <!-- edit icon-->
+                        <img src="./images/pencil.svg" alt="" >
+                    </div>
+                    <img src="./images/scholar.jpg" alt=""> <!-- college logo-->
+                    <div class="profile-info"> <!-- College information-->
+                        <h2>Jaypee Institute of Information Technology</h2>
+                        <h3> Bachelor of Technology- BTech, CSE</h3>
+                        <p><span>S.Y. - </span><span>E.Y.</span></p>
+                    </div>
+                    
+                </li>
+            </ul>
+        </div>
+        <div class="profile-details">
+            <div class="add-profile-details"> <!-- to add more profile-details details icon-->
+                <img src="./images/add.svg" alt="" >
+            </div>
+            <h2>Work Experience</h2>
+            <ul class="profile-details-list" id="organization-description">
+
+            </ul>
+        </div>
+    </div>
+    <script src="./scripts/profile.js"> </script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./styles/home.css">
+    <title>Document</title>
+</head>
+<body class="home-container">
+    <div class="middle-container">
+        <div class="write-post-container">
+            <div class="row">
+                <img class= "profile-rounded-image" src="./images/test_image.png" alt="">
+                <div class="start-post" id="click-post">
+                    <p>Start a Post</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="attach-post">
+                    <img src="./images/add_photo.png" alt="">
+                    <p> Photo</p>
+                </div>
+                <div class="attach-post">
+                    <img src="./images/add_video.png" alt="">
+                    <p> Video</p>
+                </div>
+                <div class="attach-post">
+                    <img src="./images/add_event.png" alt="">
+                    <p> Event</p>
+                </div>
+                <div class="attach-post">
+                    <img src="./images/add_article.png" alt="">
+                    <p> Article</p>
+                </div>
+            </div>
+        </div>
+        <div class="posts-feed">
+            <div class="posts-feed-head">
+                <img class="profile-rounded-image"src="./images/test_image.png" alt="">
+                <div class="post-title">
+                    <p><span>First name </span><span>last Name</span></p>
+                    <p>heading 1</p>
+                    <p>heading 2</p>
+                </div>
+            </div>
+            <div class="hr"></div>
+            <p class="post-content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt est nostrum molestias, doloribus illo corporis debitis perferendis, dolorum facilis eum nobis cum facere molestiae! Voluptas, ea eum. Fugit, quidem at.
+                Similique reprehenderit iste repellat provident id temporibus libero, non dolore placeat autem dignissimos dolorem aliquid deleniti odit facilis sequi. Natus neque accusamus mollitia labore amet nam quia officia, sed sint.
+                Tempore perferendis temporibus, rem pariatur explicabo harum eos ad ipsa. Sunt placeat modi ad eos alias, expedita molestias saepe impedit veritatis optio doloremque, quaerat minus sit libero non consequatur. Dicta.
+            </p>
+            <div class="likes-comments-info">
+                <img src="./images/like_comments.jpg" alt="">
+                <p>55</p>
+                <p >3</p>
+                <p>Comments</p>
+            </div>
+            <div class="likes-comments">
+                <div class="like">
+                    <img src="./images/like_post.png" alt="">
+                    <p>Like</p>
+                </div>
+                <div class="comment">
+                    <img  src="./images/comment_post.png" alt="" >
+                    <p>Comment</p>
+                </div>
+            </div>
+            <div class="input-comment">
+                <img class="comment-user-icon" src="./images/test_image.png" alt="">
+                <textarea class="comment-it" name="" id="id-comment-it" style="height:40px" ></textarea>
+            </div>
+            <button class="post-comment-button post-comment-button-hide" id="post-comment-button-id" >
+                Post
+            </button>
+            <div class="comments-on-post">
+                <ul>
+                    <li>
+                        <img class="comment-user-icon" src="./images/test_image.png" alt="">
+                        <div class="comment-user">
+                            <div class = "comment-user-name">
+                                <h2>First</h2>
+                                <h2>Last</h2>
+                            </div>
+                            <div class= "comment-user-title">
+                                <h3>Title1</h3>
+                                <h3>Title2</h3>
+                            </div>
+                            <div class="comment-of-user">
+                                <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                                In fugit voluptas, dolores vero aperiam maxime officia 
+                                nesciunt maiores debitis, eligendi vel corporis quae quo 
+                                consectetur necessitatibus obcaecati ad totam soluta!
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="post-dialogue" id="dialogue-box">
+            <div class="create-post" id="create-post-box">
+                <img src="./images/close_sign.jpg" class="close-sign" alt="" id="close-dialogue">
+                <h2>
+                    Create a post
+                </h2>
+                <div class="hr"></div>
+                <div class="user-to-whom">
+                    <img class="profile-rounded-image"src="./images/test_image.png" alt="">
+                    <h2>Pranjul Varshney</h2>
+                    <div class="sent-to-dropdown">
+                        <div class="selected" id="opt-selected">
+                            <img src="./images/global_icon.png" id="selected-img" alt="">
+                            <span id="selected-label">Everyone</span>
+                            <img src="./images/drop-down.svg" alt="" id="drop-down-img">
+                        </div>
+                        <div class="option-container" id="option-container">
+                            <div class="option">
+                                <img src="./images/global_icon.png" alt="">
+                                <input type="radio" name="sent-to" id="public" checked="checked">
+                                <label for="public">Everyone</label>
+                            </div>
+                            <div class="option">
+                                <img src="./images/friends_icon.png" alt="">
+                                <input type="radio" name="sent-to" id="friends" >
+                                <label for="friends">Friends</label>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+                <div class="post-area">
+                    <textarea name="" id=""  class="post-text" placeholder="What do you want to talk about?"></textarea>
+                </div>
+                <h3>Add Hashtag</h3>
+                <button class="post-button">
+                    Post
+                </button>
+            </div>
+            
+        </div>
+    </div>
+    <script src="./scripts/home.js"></script>
+</body>
+</html>

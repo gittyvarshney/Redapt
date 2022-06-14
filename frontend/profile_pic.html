@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./styles/profile_pic.css">
+    <title>Document</title>
+</head>
+<body class="super-container">
+    <div class="top-container">
+        <h3> Upload a Profile pic </h3>
+        <h4>So, It will be easy to find you</h4>
+    </div>
+    <form method="post" action="" class="middle-container" onsubmit="store_in_database(event)">
+        <div class="image-container">
+            <img src="../../../../images/gmail.png" alt="" id="image_change">
+        </div>
+        <button onclick="button_for_upload(event)" >
+        <span>Choose Pic </span>
+        </button>
+        <input type="file" name="imageFile" id="imageUpload" accept="image/*" style="display: none" onchange="show_filename(event)"> <!-- when file changes it tiggers show_filename-->
+        <p id="show_console"></p>
+        <button type="submit" value="Upload">
+        <span>Next</span>
+        </button>
+        <a href="nav_bar.html" id="skip">Skip</a> <!-- profile section is not yet connected with backend-->
+    </form>
+    <script src="./scripts/profile_pic_script.js"></script>
+</body>
+</html>

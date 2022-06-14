@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page of the Webapp</title>
+    <link rel="stylesheet" type="text/css" href="./styles/login.css">
+    <script src="./scripts/login_script.js"></script>
+</head>
+<body>
+    <div class="super-container">
+        <div class="parent-container">
+            <div class="img-container"> <!--logo-->
+                <img src="./images/readapt.png" alt="">
+            </div>
+            <div class="form-border" id="change-form-width"> <!-- designing card for a whole input-->
+                <h1>Sign in</h1>
+                <p> Stay updated on your professional world </p>
+                <p id="invalid-credentials" class="credentials-not-show"> Username or password is invalid</p>
+                <form class= "form" action="./gota" onsubmit="validateButton(event)" method="post" >
+                    <div class="form-input" id="email_border">
+                      
+                        <input type="text" id="user_email" name="user_email" class="form-control" required>
+                        <label class="label-control" for="user_email" id="label-user_email" >Email or Phone</label>
+                    </div>
+                    <div class="paragraph-notshow" id="invalid-email">
+                    <p >Invalid Email or Phone</p>
+                    </div>
+                    <div class="form-input" id="password_border">
+                        <input type="password" id="password" name="password" class="form-control" required>
+                        <label class="label-control" for="password" id="label-password" >Password</label>
+                    </div>
+                    <div class="paragraph-notshow" id="invalid-password">
+                        <p> Atleast 8 characters, one Number, one Letter</p>
+                    </div>
+                    <a href="">Forgot password?</a>
+                    <button type="submit" >Sign in</button>
+                </form>
+            </div>
+            <div class="parent-container-bottom">
+                <p>New to Redapt ?</p>
+                <a href="http://127.0.0.1:5500/signup.html">Join Now</a>
+            </div>
+        </div>
+        <footer class="footer-container">
+            <a href="">Redapt &copy 2021</a>
+            <a href="">Documentation</a>
+            <a href="">About</a>
+            <a href="">Send Feedback</a>
+        </footer>
+    </div>
+</body>
+</html>

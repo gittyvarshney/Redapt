@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./styles/singup_next.css">
+    <script src="./scripts/singup_next_script.js"></script>
+    <title>Document</title>
+</head>
+<body class = "super-container">
+    <div class= "top-container">
+        <h1>First, Let's make sure you are recognizable</h1>
+        <h2>This will help other's recognize you on redapt</h2>
+    </div>
+    <div class="middle-container">
+        <form action=""  onsubmit="validateButton(event)">
+            <div class="form-input"> 
+                <label class="label-control" for="country">Country *</label>
+                <input type="text" id="country" name="country" required>
+
+                <label class="label-control" for="first-name">First Name *</label>
+                <input type="text" id="first-name" name="first-name" required>
+
+                <label class="label-control" for="last-name">Last Name *</label>
+                <input type="text" id="last-name" name="last-name" required>
+            </div>
+               
+            <div class="radio-container">
+                <p> Are you a student? * </p>
+                <input type="radio" onchange="hideCompany(this)" name="specifications" id="radio-yes"> 
+                <label for="">Yes</label>
+                <input type="radio" onchange="hideCollege(this)" name="specifications" checked>
+                <label for="">No</label> 
+            </div>
+            <div class="option-mapping-1" id="company_toggle">
+                <div class="form-input">  
+                    <label class="label-control" for="company">Company *</label>
+                    <input type="text" id="company" name="company" required="required" >
+                </div>
+                <div class="form-input">  
+                    <label class="label-control" for="jobtitle">Job title *</label>
+                    <input type="text" id="jobtitle" name="jobtitle" required="required">
+                </div>
+            </div>
+            <div class="option-mapping-1" id="college_toggle" style="display: none;">
+                <div class="form-input">
+                    <label class="label-control" for="college">College *</label>
+                    <input type="text" id="college" name="college" >
+                </div>
+                <div class="form-input"> 
+                    <label class="label-control" for="course">Course *</label>
+                    <input type="text" id="course" name="course" >
+                </div>
+            </div>
+
+            <div class="submit-container">
+            <button type="submit" >Next</button>
+            <p>*required fields</p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

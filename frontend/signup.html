@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./styles/signup.css">
+    <script src="./scripts/signup_script.js"></script>
+</head>
+<body class="super-container">
+    <div class="top-container">    
+        <div class= "img-container">
+            <img src="./images/readapt.png" alt=""> <!-- image logo-->
+        </div>
+        <h1>Make the most of your professional Life</h1>
+    </div>
+    <div class="middle-container">
+        <form action="./gota" onsubmit="validateButton(event)" method="post"  class="form-container">
+            <div class="form-input" >  <!-- form input email or phone number-->
+                <label class="label-control" for="user_email"  >Email or phone number</label>
+                <input type="text" id="user_email" name="user_email"  required>
+            </div>
+            <div class="paragraph-notshow" id="user-already-exist">
+                <p >User Already exists</p>
+            </div>
+            <div class="paragraph-notshow" id="invalid-email">
+                <p >Invalid Email or Phone</p>
+            </div>
+            <div class="form-input" >  <!-- form input password-->
+                <br>
+                <label class="label-control" for="password" >Password</label>
+                <input type="password" id="password" name="password"  required>
+            </div>
+            <div class="paragraph-notshow" id="invalid-password">
+                <p> Atleast 8 characters, one Number, one Letter</p>
+            </div>
+            <p>By clicking Agree & Join, you agree to the Redapt <!-- user agreement--> 
+            <a href="">User Agreement</a> 
+            & 
+            <a href="">privacy policy</a></p>
+            <button type="submit" >Agree & Join</button> <!-- submit button-->
+        </form>
+        <div class="or-container">  <!-- dividing the choice -->
+            <hr>
+            <p>or</p>
+            <hr>
+        </div>
+        <div class="google-container">  <!-- login through google acount -->
+          <img src="./images/google_icon.png" alt="">
+          <p>join with Google</p>
+        </div>
+        <div class="middle-container-bottom"> <!-- redirect to login page-->
+            <p>Already on Redapt?</p>
+            <a href="http://127.0.0.1:5500/login.html">Sign in</a>
+        </div>
+    </div>
+    <footer class="footer-container"> <!-- footer -->
+        <a href="">Redapt &copy 2021</a>
+        <a href="">Documentation</a>
+        <a href="">About</a>
+        <a href="">Send Feedback</a>
+    </footer>
+</body>
+</html>

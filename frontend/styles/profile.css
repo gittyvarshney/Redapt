@@ -1,0 +1,238 @@
+/*middle container to show the profile details*/
+.super-container{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid rgba(200, 211, 235, 0.728); */
+    align-items: center;
+    background-color: rgba(232, 240, 250, 0.809);
+}
+
+.middle-container{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+/*to show the background image of the profile*/
+.background-container{
+    z-index: 1;
+    position: relative; /* position is set to relative to show image over it*/
+    width: 100%;
+}
+
+
+
+.background-container img{
+    height: 200px;
+    width: 100%;
+    max-height: 200px;
+    max-width: 100%;
+    border: 1px transparent;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* profile image positioned as absolute over the background image*/
+.profile-image{
+   position: absolute;
+   top : 160px;
+   left : 40px;
+   height: 100px;
+   width: 100px;
+}
+
+.profile-image img{
+   background-color: white;
+   padding: 4px;
+   border: 1px transparent;
+   max-width: 100%;
+   max-height: 100%;
+   border-radius: 50%;
+   cursor: pointer;
+}
+
+/* class for the personal information */
+.personal-info{
+    position: relative;
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid #000; */
+    border-radius: 10px;
+    background-color: white;
+}
+
+/* class for the first name and last name */
+.profile-name{
+    display: flex;
+    flex-direction: row;
+    margin-left: 6px;
+}
+
+.profile-name h1{
+    margin-right: 10px;
+    margin-bottom: 5px;
+    font-size: 1.4em;
+    font-family: cursive;
+}
+
+/* class for the title information */
+
+.profile-title{
+    display: flex;
+    flex-direction: row;
+    margin-left: 6px;
+}
+
+.profile-title h2{
+    margin-top: 3px;
+    margin-right: 7px;
+    font-size: 1em;
+    font-family: sans-serif;
+}
+
+/* edit icon at the right of the profle-info */
+.edit-profile-info{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.edit-profile-info img{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+/* profile-details class to show the profile-details details of the user */
+.profile-details{
+    position: relative;
+    margin-top: 15px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+/* add profile-details icon at the left of the profile-details class */
+.add-profile-details{
+   position: absolute;
+   top: 0px;
+   right: 20px;
+   width: 20px;
+   height: 20px;
+}
+
+.add-profile-details img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Educatio heading*/
+.profile-details h2{
+    font-size: 1em;
+    font-family: 'Trebuchet MS', sans-serif;
+    margin: 0 0 10px 5px;
+}
+
+/* class for the unordered list inside the profile-details*/
+.profile-details ul{
+    margin: 8px 0 15px 5px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+/* list items inside the unordered list*/
+.profile-details ul li{
+    position: relative;
+    padding: 5px 5px;
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid #000; */
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* edit profile-details item inside every list item*/
+.edit-profile-details{
+   position: absolute;
+   top: 10px;
+   right: 20px;
+   width: 20px;
+   height: 20px;
+}
+
+.edit-profile-details img{
+   max-width: 100%;
+   max-height: 100%;
+}
+
+/* scholar icon for the logo purpose of the college*/
+.profile-details ul li img{
+    margin: 3px 10px 3px 3px;
+    height: 65px;
+    width: 65px; 
+}
+
+/* college-info class for the name of the college and course*/
+.profile-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-info h2,h3{
+   font-size: 1em;
+   font-family: 'Trebuchet MS', sans-serif;
+   margin: 0 0 5px 5px;
+   
+}
+
+.profile-info p{
+    margin: 3px 0 5px 5px;
+    font-size: 0.8em;
+ 
+}
+
+ /*expanding the width of the middle container to 80% */
+@media only screen and (max-width:800px){
+   .middle-container{
+       width: 80%;
+   }
+}
+
+/* setting the middle container when the width is less than 470 pixels*/
+@media only screen and (max-width:470px){
+   .profile-details ul li{
+       flex-direction: column; 
+       align-items: center;
+   }
+
+   .profile-name h1{
+       font-size: 1em;
+   }
+   .profile-title{
+       flex-wrap: wrap;
+   }
+   .profile-title h2{
+       margin-bottom: 5px;
+   }
+   .profile-info h2,h3,p{
+        text-align: center;
+   }
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,229 @@
+
+/* taking a super container for defining the justify-contetn and align-items*/
+.super-container{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+/* parent container for the logo and the input form*/
+.parent-container{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 500px;
+    height: 80vh;
+    width: 35%;
+    justify-content: start;
+    /* border:1px green solid; */
+}
+
+/* image container for defining the boundaries of the image*/
+.img-container{
+    margin: 10% 0% 3% 3%;
+    width: 40%;
+    height: 10%;
+    border: 1px solid #000;
+}
+
+.img-container img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* form border container to hold the elements of the form*/
+.form-border{
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    padding: 5% 5% 5% 5%;
+    border: 1px solid rgb(255, 255, 255);;
+    height: auto;
+    flex-direction: column;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 10px rgb(240, 232, 232);
+    box-shadow: 0 0 10px rgb(236, 231, 231);
+}
+
+.form-border h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 5px;
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.form-border p{
+    margin-top: 5px;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+.form-border .credentials-not-show{
+    display: none;
+}
+
+.form-border .credentials{
+    display: flex;
+    justify-content: center;
+    color: red;
+}
+
+
+/* form class to hold the input email and password*/
+.form{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    /* border: 1px solid #000; */
+}
+
+/*form input class shared by both email and password*/
+.form-input{
+    overflow: hidden;
+    display: flex;
+    margin-top: 10px;
+    /* margin-left: 10px; */
+    margin-right: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    height:20%;
+    flex-direction: column;
+    border: 2px solid rgba(31, 105, 190, 0.877);
+    border-radius: 8px;
+}
+
+/* form input customization*/
+.form-input input{
+    padding-top: 25px;
+    padding-left: 5px;
+    font-size: 25px;
+    border: none;
+    outline: none;
+}
+
+
+/* designing label to go upward when text field is in focus*/
+.label-control {
+    position: absolute;
+    top: 0;
+    font-size: 20px;
+    margin-top: 10px;
+    padding: 3px 0 0 5px;
+    transition: all 200ms;
+    opacity: 0.5;
+  }
+
+  .form-control:focus + .label-control,
+  .form-control:valid + .label-control {
+    font-size: 16px;
+    transform: translate3d(0, -60%, 0);
+    opacity: 1;
+  }
+
+  /*forgot password link*/
+  .form a{
+    text-decoration: none;
+    color: rgba(47, 101, 163, 0.877);
+    padding-left: 10px;
+    margin-bottom: 10px;
+  }
+
+  /*customizing the submit button*/
+
+  .form button[type="submit"]{
+    overflow: hidden;
+    margin: 2% 2% 2% 2%;
+    background-color:rgba(26, 121, 199, 0.712); 
+    border: 2px solid rgba(45, 126, 192, 0.3);
+    color: rgb(255, 255, 255);
+    padding: 5% 5% 5% 5%;
+    flex-shrink: 4;
+    text-align: center;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+    cursor:pointer;
+  }
+
+  /* on hover*/
+  .form button[type="submit"]:hover{
+    background-color:rgba(27, 74, 206, 0.89); 
+  }
+
+  /* bottom of the form if not have an account Join now*/
+  .parent-container-bottom{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .parent-container-bottom p{
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1em;
+  }
+
+  .parent-container-bottom a{
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 10px;
+    text-decoration: none;
+    color: rgba(37, 89, 211, 0.89);
+    font-size: 1em;
+}
+
+/*changes when the inputs are wrongly not validated*/
+.paragraph-notshow p{
+    margin: 0 0 0 0;
+    color: red;
+    display:none
+}
+
+.paragraph-show p{
+    display:flex
+}
+
+.input-border-change{
+    border-color: red ;
+}
+
+.label-change{
+    color: red !important;
+}
+
+/*for designing the footer contents*/
+.footer-container{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    height: 5vh;
+    width: 60%;
+    align-items: center;
+    justify-content: space-between;
+    /* border:1px green solid; */
+}
+
+.footer-container a{
+    /* margin-top: 2%; */
+    color: rgba(29, 31, 32, 0.664);
+    text-decoration: none;
+    /* border:1px green solid; */
+}
+
+/*media queries for less than 750px*/
+@media only screen and (max-width:750px){
+    .parent-container{
+     width:80%
+    }
+    .footer-container{
+        flex-direction: column;
+    }
+    .footer-container a{
+        margin-top: 3%;
+    }
+    .form-border{
+        height: 70%;
+    }
+ }
+ 

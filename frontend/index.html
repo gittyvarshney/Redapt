@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trying to design Linkedin User Interface..</title>
+    <link rel="stylesheet" type="text/css" href="./styles/index_styles.css">
+    <script src="./scripts/index_script.js"></script>
+    
+</head>
+<body > 
+<header>
+    
+    <div class="head-container">
+
+        <div class="head-logo"> <img src="./images/readapt.png" alt="logo"> </div>
+        
+        <!-- for greater than 600px devices -->
+        <div class="head-buttons">
+            <a href='login.html'> Login </a>
+            <a href='signup.html'> SignUp </a>
+        </div>
+        
+        <!-- for less than 600px devices -->
+        <div class="media-dropdown">
+            <input type="button"  onclick="click_on_dropdown()"> <!--function changed*-->
+                <div class="media-c-dropdown" id="click_dropdown"> 
+                    <a href="login.html">Login</a>
+                    <a href="signup.html">SignUp</a>
+                </div>
+        </div>
+
+    </div>
+</header>
+<div class="super-container">
+    <div class="child-container-1">
+        <h1>Welcome to the community of geeks</h1>
+        <div class="child-container-1-child">
+            <a href="">
+                <span> Search jobs or companies</span>          
+            </a>
+            <a href=""> 
+                <span> Search Peoples</span>
+            </a>
+            <a href=""> 
+                <span> Search Skills, Subjects or Softwares</span> 
+            </a>
+        </div>
+    </div>
+    <div class="child-container-2">
+        <img src="./images/working_people.jpg" alt="">
+    </div>
+</div>
+
+<footer class="f-container">
+    <a href="" class="f-container-1">
+        <img src="./images/fb.png" alt="facebook">
+    </a>
+    <a href="" class="f-container-1">
+        <img src="./images/twitter.png" alt="facebook">
+    </a>
+    <a href="" class="f-container-1">
+        <img src="./images/gmail.png" alt="facebook">
+    </a>
+    <a href="" class="f-container-1">
+        <img src="./images/linkedin.png" alt="facebook">
+    </a>
+</footer>
+
+</body>
+</html>

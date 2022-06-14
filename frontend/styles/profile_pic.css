@@ -1,0 +1,114 @@
+.super-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+
+.top-container{
+    margin-top: 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid #A49; */
+}
+
+.top-container h3{
+    margin: 6px 6px 6px 6px;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-size: 2.5em;
+    color: rgba(26, 44, 146, 0.7);
+}
+
+.top-container h4{
+    margin: 6px 6px 6px 6px;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-size: 2em;
+    color: rgba(47, 70, 204, 0.438);
+}
+
+.middle-container{
+    margin-top: 10px;
+    padding: 6px 6px 6px 6px;
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    border: 1px transparent;
+    border-radius: 10%;
+    -webkit-box-shadow: 0 0 10px rgb(235, 250, 192);
+    box-shadow: 0 0 10px rgb(229, 250, 181);
+}
+
+.image-container{
+    padding: 7px 7px 7px 7px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6px;
+    align-self: center;
+    background-color: rgba(58, 160, 55, 0.295);
+    width: 90%;
+    height: 250px;
+    border: 1px transparent;
+    border-radius: 50%;
+}
+
+.image-container img{
+    border-radius: 50%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.middle-container button{
+    margin: 10px 10px 10px 10px;
+    align-self: center;
+    background-color: rgba(44, 187, 151, 0.438);
+    border: 2px transparent;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    display:flex;
+    width: 35%;
+    height: 30px;
+}
+
+.middle-container button span{
+    color: rgba(18, 1, 19, 0.753);
+    font-size: 1em;
+    font-family: cursive;
+}
+
+.middle-container button[type="submit"]{
+    background-color: rgba(25, 70, 216, 0.404);
+}
+
+.middle-container button[type="submit"] span{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode';
+    font-size: 1em;
+}
+
+.middle-container a{
+    font-size: 1em;
+    align-self: center;
+    font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+    text-decoration: none;
+    color: rgba(122, 147, 218, 0.411);
+}
+
+@media only screen and (max-width:540px){
+    .top-container h3{
+     font-size: 1.4em;
+    }
+    .top-container h4{
+        font-size: 1em;
+    }
+    .middle-container{
+        width: 90vw;
+    }
+    .image-container{
+        width: 260px;
+        border-radius: 50%
+    }
+}

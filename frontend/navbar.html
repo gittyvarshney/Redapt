@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./styles/navbar.css">
+    <link rel="stylesheet" id = "load-nav-style"type="text/css" href="./styles/profile.css">
+
+</head>
+<body class="super-container" id="body">
+    <div class="nav-bar"> <!-- containing all of the navigation bar -->
+        <div class="logo-search" id="logo-search"> <!-- logo at the left side of the page-->
+            <div class="logo">
+              <img src="./images/redapt_logo.png" alt="">
+            </div>
+            <div class="search" id="search"> <!-- default search when the screen size is more than 780 pixels-->
+                <img src="./images/search.svg" alt="" >
+                <input type="text" name="" >
+            </div>
+            <div class="hidden-search" id="hidden-search" > <!-- active when width is less than 780 pixels-->
+                <img src="./images/search.svg" alt="">
+            </div>
+            <div class="media-search" id="media-search"> <!-- alternative search to take 80% the total width of the nav bar-->
+                <img src="./images/search.svg" alt="" >
+                <input type="text" name="" >
+            </div>
+        </div>
+        <div class="logo-name">
+            <h2>
+                Welcome to Redapt
+            </h2>
+        </div>
+        <div class="nav-items" id="nav-items"> <!-- navigation icons at the right side of the page-->
+            <ul>
+                <li>
+                    <img src="./images/home.svg" alt="" id="home-page">
+                    <div class="active-block"></div>
+                </li>
+                <li>
+                    <img src="./images/peoples.png" alt="">
+                    <div class="active-block"></div>
+                </li>
+                <li>
+                    <img src="./images/messages_icon.png" alt=""> <!-- requires socket.io persistent api-->
+                    <div class="active-block"></div> <!-- thus, functionality not defined-->
+                </li>
+                <li>
+                    <img src="./images/notification_icon.png" alt="">
+                    <div class="active-block"></div>
+                </li>
+                <li> <!-- profile icon -->
+                    <button onclick="show_drop_down(event)"> <!-- showing as the button -->
+                    <img src="./images/profile_mail_icon.png" alt="">
+                    <!-- <div class="arrow_select"></div> -->
+                    </button>
+                    <div class="profile-menu" id="profile-menu-id"> <!-- displaying the popup menu on click-->
+                        <div class="person-pic-info"> <!-- personal info to display inside popup menu-->
+                            <div class="person-pic" id="p-image"> <!-- to display the image-->
+                                <img src="./images/test_image.png" alt="">
+                            </div>
+                            <div class="person-info"> <!-- personal information inside the popup menu-->
+                                <h1>Kuliza Technologies</h1>
+                                <h2>Web Development</h2>
+                            </div>
+                        </div>
+                        <input type="button" name="" id="profile-page" value="View Profile"> <!-- View profile button-->
+                        <div class="logout">
+                            <img src="./images/logout_icon.png" alt="">
+                            <p>Logout</p>
+                        </div>
+                    </div>             
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="navitems-container" id="mid-container">
+        
+    </div>
+    <iframe src="profile.html" id="nav-iframe" frameborder="0" onload="iframe_load()" ></iframe>
+    <script src="./scripts/navbar.js"></script>
+</body>
+
+</html>

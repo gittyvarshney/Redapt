@@ -1,0 +1,254 @@
+/* body is given a class super-container */
+.super-container{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* border: 1px solid rgb(31, 60, 121); */
+}
+
+/* container for image and heading */
+.top-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    width: 75vw;
+    height: 15vh;
+    /* border: 1px solid #000; */
+}
+
+/* container to hold image */
+.img-container{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    margin-top:0;
+    min-width: 230px;
+    width: 30%;
+    height: 50%;
+    /* border: 1px solid #000; */
+}
+
+
+.top-container h1{
+    align-self: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    font-weight: 100;
+    text-align: center;
+}
+
+.img-container img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* middle container is for form and other elements inside the card */
+.middle-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1%;
+    margin-top: 2%;
+    min-width: 350px;
+    width: 25vw;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid rgb(255, 255, 255);
+    -webkit-box-shadow: 0 0 10px rgb(240, 232, 232);
+    box-shadow: 0 0 10px rgb(236, 231, 231);
+}
+
+/* for container to hold the element from input fields to submit button */
+.form-container{
+    display:flex;
+    flex-direction: column;
+    height: auto;
+}
+
+
+.form-input{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input label{
+    color: rgba(157, 160, 167, 0.904);
+    font-weight: 50;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 2%;
+}
+
+.form-input input{
+    padding: 5px 5px 5px 5px;
+    font-size: 20px;
+    border: 1px solid rgba(43, 81, 165, 0.63);
+    border-radius: 5px;
+}
+
+.middle-container p{
+    padding: 5px 5px 5px 5px;
+    font-size: 10px;
+    text-align: center;
+}
+
+.middle-container p a{
+    text-decoration: none;
+    color: blue;
+}
+
+.paragraph-notshow p{
+    margin: 0 0 0 0;
+    color: red;
+    display:none
+}
+
+.paragraph-show p{
+    display:flex
+}
+
+.form-input .input-border-change{
+    border: 1px solid rgba(199, 32, 110, 0.63);
+}
+
+.middle-container button[type="submit"]{
+    overflow: hidden;
+    margin: 2% 5% 2% 5%;
+    background-color:rgba(26, 121, 199, 0.712); 
+    border: 2px solid rgba(45, 126, 192, 0.3);
+    color: rgb(255, 255, 255);
+    padding: 3% 2% 3% 2%;
+    flex-shrink: 4;
+    text-align: center;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1em;
+    cursor:pointer;
+  }
+
+  .middle-container button[type="submit"]:hover{
+    background-color:rgba(27, 74, 206, 0.89); 
+  }
+
+  /*container to give a design to signup throught google*/
+  .or-container{
+    margin: 3% 0 3% 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  /*horizontal rule to be displayed as*/
+  .or-container hr{
+    border-style: outset;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+    width: 40%
+  }
+
+/* or between two horizontal rules*/
+  .or-container p{
+    font-size: 1em;
+    width: 20%;
+    margin: 0;
+    padding: 0;
+  }
+
+/*Signup through google button*/
+  .google-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: stretch;
+    align-items: center;
+    overflow: hidden;
+    margin: 2% 2% 2% 2%;
+    background-color:rgba(253, 253, 253, 0.712); 
+    border: 2px solid rgba(19, 129, 219, 0.603);
+    color: rgb(22, 88, 211);
+    padding: 2% 2% 2% 2%;
+    flex-shrink: 2;
+    text-align: center;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1em;
+    cursor:pointer;
+  }
+
+  .google-container p{
+      margin: 1% 1% 1% 4%;
+      font-size: 1em;
+      padding-top: 1%;
+  }
+
+  .google-container img{
+    max-width: 30px;
+    max-height: 30px;
+}
+
+/*container to redirect to login*/
+   .middle-container-bottom{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+    .middle-container p{
+    font-size: 1em;
+}
+
+    .middle-container a{
+    font-family: serif;
+    text-decoration: none;
+    font-size: 1em;
+    color: rgba(14, 17, 212, 0.918);
+}
+
+/*container to show the footer elements*/
+.footer-container{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    height: 5vh;
+    width: 60%;
+    align-items: center;
+    justify-content: space-between;
+    /* border:1px green solid; */
+}
+
+.footer-container a{
+    margin-top: 2%;
+    color: rgba(29, 31, 32, 0.664);
+    text-decoration: none;
+    /* border:1px green solid; */
+}
+
+/*media query when the display is less than 750px*/
+@media only screen and (max-width:750px){
+    .top-container{
+     width:80vw;
+     height: 20vh;
+    }
+    .top-container h1{
+        font-size: 1.3em;
+    }
+    .footer-container{
+        flex-wrap: wrap;
+    }
+}
+
+/*media query when the display is less than 400px*/
+ @media only screen and (max-width:400px){
+    .middle-container{
+        min-width: 0px; /*disabling the min-width property */
+        width: 80vw;
+    }
+    .footer-container{
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+}

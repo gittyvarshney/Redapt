@@ -1,0 +1,317 @@
+
+/* The Parent flex container of all the divisions */
+.head-container{
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    justify-content: space-between;
+    /* border:1px green solid; */
+}
+
+/* The logo divisio */
+.head-logo{
+    flex-shrink: 1;
+    width: 30%;
+    height:100%;
+    min-width: 180px;
+}
+
+
+/* Image should be of the size of the class head-logo */
+.head-logo img{
+    max-height:100%;
+    max-width: 100%;
+}
+
+/* Login and sign up buttons when the display is greater than 600 px */
+.head-buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 20%;
+    height:100%;
+    /* border:1px red solid; */
+    min-width: 180px;
+}
+
+/* Login button */
+.head-buttons a:nth-child(1){
+    background-color:white; 
+    border: 2px solid rgba(45, 126, 192, 0.3);
+    color: rgba(76, 159, 187, 0.89);
+    padding: 5% 5% 5% 5%;
+    text-align: center;
+    border-radius: 5%;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+/* SignUp button */
+.head-buttons a:nth-child(2){
+    background-color:white;
+    border: 2px solid rgba(100,123,23,0.3);
+    color: rgba(30,123,23,0.7);
+    padding: 5% 5% 5% 5%;
+    text-align: center;
+    border-radius: 5%;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+/* Hovering effects on them*/
+.head-buttons a:hover:nth-child(1){
+    background-color:rgba(160, 186, 207, 0.219);
+    border-width:5px;
+  }
+
+.head-buttons a:hover:nth-child(2) {
+    background-color:rgba(179, 216, 201, 0.3);
+    border-width:5px;
+  }
+
+/* when media size is less than 600pixels setting the media dropdown class*/
+.media-dropdown{
+    display:none;
+    width: 100%;
+    height: 60%;
+}
+
+/* input button which on clicked show login and signup*/
+.media-dropdown input{
+    background-image: url('../images/caret_down.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 5% 10% 5% 10%;
+    margin-bottom: 3%;
+    background-color: rgba(126, 175, 168, 0.514);
+    border: 5px solid rgba(94, 148, 148, 0.904);
+    border-radius: 50%;
+}
+
+/*hovering effect*/
+.media-dropdown input:hover{
+    background-color: rgba(51, 185, 58, 0.514);
+}
+
+/*login and signup anchors to be in the media-c-dropdown class*/
+
+
+/*designing of the the anchors*/
+.media-c-dropdown a:nth-child(1){
+    background-color:white; 
+    border: 2px solid rgba(45, 126, 192, 0.3);
+    color: rgba(76, 159, 187, 0.89);
+    padding: 2% 2% 2% 2%;
+    text-align: center;
+    border-radius: 30%;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.media-c-dropdown a:nth-child(2){
+    margin-left: 10%;
+    background-color:white;
+    border: 2px solid rgba(100,123,23,0.3);
+    color: rgba(30,123,23,0.7);
+    padding: 2% 2% 2% 2%;
+    text-align: center;
+    border-radius: 30%;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+/* The middle part */
+
+/*container to divide the view into two columns*/
+.super-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+/*first column to be furthur divided into two rows*/
+/*first column*/
+.child-container-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+}
+
+/*first row of the column to be a heading 1*/
+.child-container-1 h1{
+    /* border: 1px solid rgba(119, 94, 148, 0.904); */
+    margin-top: 6px;
+    margin-bottom:2px;
+    font-size: 4.5rem;
+    font-weight: 200;
+    text-align: center;
+    font-family: sans-serif;
+    line-height: 100%;
+    color: #2977c9;
+}
+
+/* changes to be made when the pixel width is less than 600px*/
+@media only screen and (max-width:600px){
+    .head-buttons{
+        display:none;
+    }
+    .head-container{
+        flex-direction: column;
+        height: 250px;
+    }
+    .media-dropdown{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* border: 1px solid yellow; */
+    }
+    .head-logo{
+        height:40%;
+        margin-left:auto;
+        margin-right:auto
+    }
+    .media-c-dropdown{
+        display:none;
+    }
+    .child-container-1 h1{
+        /* border: 1px solid rgba(119, 94, 148, 0.904); */
+        font-size: 2rem;
+    }
+}
+
+.show-media-c-dropdown{
+    display:flex;
+    width:50%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/* second row of the column to be a container*/
+.child-container-1-child{
+    margin:0 0 0 0;
+    /* border: 1px solid rgba(115, 161, 40, 0.7); */
+    width: 100%;
+    height: 50%
+}
+
+/* which has a anchor element to be treated as flex container*/
+ .child-container-1-child a{
+    display:flex;
+    margin: 1% 1% 1% 1%;
+    flex-direction: row;
+    margin-top: 10px;
+    color: black;
+    text-decoration: none;
+    border: 1px solid rgba(126, 175, 168, 0.514);
+    justify-content: space-between;    
+}
+
+
+
+/* paragraph inside the container*/
+.child-container-1-child p{
+    margin-left: 1%;
+    font-size: 0.8em;
+}
+
+.child-container-1-child span{
+    margin: 2.5% 1% 2.5% 1%;
+    font-size: 1em;
+}
+
+/*pseudo class to display the extra '>' */
+.child-container-1-child a::after{ 
+    margin: 2.5% 1% 2.5% 1%;
+    font-size: 1em;
+    content: ">";
+}
+
+/*hovering effect of anchor*/
+.child-container-1-child a:hover{
+    box-shadow: 10px 5px 5px rgba(154, 151, 192, 0.432);
+}
+
+/* second column of the first container*/
+.child-container-2{
+    display: flex;
+    margin: 0.5% 0.5% 1% 0.5%;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
+    /* border: 1px solid rgba(51, 185, 58, 0.514); */
+    width: 50%;
+    height: 100%;
+}
+
+/* image inside the second column*/
+.super-container img{
+    max-height:100%;
+    max-width: 100%;
+}
+
+/* when screen is less than 600 pixels*/
+
+@media only screen and (max-width:600px){
+   .super-container{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   }
+   .child-container-2{
+       width: 100%;
+   }
+   .child-container-1{
+       width: 100%
+   }
+}
+
+/*container for adding the footer elements*/
+.f-container{
+    margin: 1% 1% 0% 1%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 150px;
+    /* border: 1px solid rgba(35, 53, 68, 0.3); */
+}
+
+/*class of anchor element*/
+.f-container-1{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height:100%;
+    /* border: 1px solid rgba(34, 126, 201, 0.3); */
+}
+
+.f-container-1 img{
+    max-height:70%;
+    max-width: 70%;
+}
+
+.f-container a:hover:nth-child(1){
+    background-color:rgba(38, 85, 187, 0.87);
+  }
+
+.f-container a:hover:nth-child(2){
+    background-color:rgba(45, 155, 219, 0.507);
+  }
+.f-container a:hover:nth-child(3){
+    background-color:rgba(228, 67, 26, 0.507);
+  }
+.f-container a:hover:nth-child(4){
+    background-color:rgba(31, 148, 194, 0.575);
+  }
+
+
+
+
+

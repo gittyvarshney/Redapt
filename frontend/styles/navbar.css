@@ -1,0 +1,398 @@
+/*body has a diplay flex*/
+.super-container{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid #000; */
+    align-items: center;
+    background-color: rgba(181, 197, 211, 0.217);
+}
+
+
+*:focus{
+    outline: none;
+}
+
+/*container for the navigation bar*/
+.nav-bar{
+    box-sizing: border-box;  
+    display:flex;
+    /* border: 1px solid rgb(118, 36, 36); */
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.932);
+    padding: 2px 5px 2px 10px;
+    border-radius: 10px;
+    height: 50px;
+    width: 100%;
+    flex-grow: 1;
+}
+
+/*class enclosing the logo and search*/
+.nav-bar .logo-search{
+    display: flex;
+    /* border: 1px solid #000; */
+    width:40%
+}
+
+/*class for logo*/
+.logo{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    width: 50px;
+}
+.logo img{
+    max-width: 40px;
+    max-height: 40px;
+}
+
+ /* class for search  */
+.search{
+    display: flex;
+    align-items: center;
+    margin: 2px 2px 2px 2px;
+    width: 300px;
+    margin-left: 10px;
+    background-color: rgba(141, 181, 201, 0.1);
+    border: 1px transparent;
+    border-radius: 8px;
+}
+
+/* class for search icon */
+.search img{
+    margin: 3px 5px 2px 10px;
+    max-height: 60%;
+    max-width: 20%;
+    cursor: pointer;
+}
+
+/* class for search input */
+.search input[type="text"]{
+    font-size: 1em;
+    border: none;
+    background-color: transparent;
+}
+
+/* class for middle heading  */
+.logo-name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+}
+
+.logo-name h2{
+    color: rgba(100, 155, 231, 0.53);
+    margin: 0 0 0 0px;
+    font-family: 'Calibri', 'Trebuchet MS';
+    font-size: 1.3em;
+    text-align: Center;
+}
+
+/* class enclosing all of the right icons */
+.nav-items{
+    display: flex;
+    width: 40%;
+    align-items: center;
+    justify-content: flex-end;
+    /* border: 1px solid #000; */
+}
+
+/* class of unordered list within nav items */
+.nav-items ul{
+    padding: 0;
+    margin: 0 5px 0 5px;
+    display: flex;
+}
+
+.nav-items ul li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-left: 20px;
+    margin-right: 20px;
+    list-style: none;
+}
+
+/* class for the profile button within the list item  */
+.nav-items ul li button{
+    position: relative; /* position specified as relative to show hovering effect*/
+    height: 30px;
+    border: 0px;
+    color: none;
+    width: 30px;
+    padding:0;
+    margin: 0;
+    background-color: transparent;
+    /* border: 1px solid darkblue; */
+}
+
+/* class for the profile image in the button of list item */
+.nav-items ul li button img{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.nav-items ul li img{
+    max-height: 30px;
+    max-width: 30px;
+}
+
+/*active block to show the hovering effect*/
+.active-block{
+    position: absolute;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: black;
+    transition: all 200ms;
+}
+
+ /* when hovering over the list item width became 100% */
+.nav-items ul li:hover .active-block{
+    width: 100%;
+}
+
+/* displaying popup menu on clicking the profile list item */
+.profile-menu{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 100px;
+    right: 0;
+    display: flex;
+    /* height: 200px; */
+    width: 280px;
+    background-color: rgba(235, 204, 165, 0.66);
+    /* border: 1px solid #000; */
+    border-radius: 10px;
+    transition: 0.5s;
+    visibility: hidden;
+    z-index: 10;
+    opacity: 1; 
+}
+
+/* to show the pointed icon at the top of menu*/
+.profile-menu::before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    /* border: 1px solid #000; */
+    background-color: rgba(235, 204, 165, 0.347);
+    opacity: 1;
+    transform: translate3d(-8px, -5px, 0) rotate(45deg);
+}
+
+/* on clicking the profile list item the active class gets added*/
+.profile-menu.active{
+    top: 60px;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* class for profile pic and the info*/
+.person-pic-info{
+    display: flex;
+    margin-top: 10px;
+    flex-direction: row;
+    width: 100%;
+}
+
+/* profile image*/
+.person-pic{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 60px;
+}
+
+/*setting the image of the profile inside the popup menu*/
+#p-image img{
+    max-height: none;
+    max-width: none;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+.person-info h1{
+    text-align: center;
+    margin: 8px 3px 3px 3px;
+    font-size: 0.8em;
+}
+
+.person-info h2{
+    text-align: center;
+    margin: 3px 3px 3px 3px;
+    font-size: 0.7em;
+}
+
+/* class for the View profile button inside the popup menu */
+.profile-menu input[type="button"]{
+    margin: 10px 40px 10px 40px;
+    padding: 5px 5px;
+    color: rgba(54, 58, 79, 0.591);
+    background-color: rgba(95, 159, 191, 0.1);
+    border: 1px solid rgba(63, 42, 226, 0.272);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* for the logout button*/
+.logout{
+    align-self: center;
+    width: 40%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.logout img{
+    margin-right: 10px;
+    width: 20px;
+    height: 20px
+}
+
+.logout p{
+    margin: 0;
+}
+
+/* to show only the search icon when the screen size is less than 780px*/
+.hidden-search{
+    display: none;
+    width: 50%;
+    margin-left: 10px;
+}
+
+.hidden-search img{
+    max-width: 20px;
+    max-height: 60px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width:780px){
+
+
+    .nav-bar .logo-search{
+        width: 20%;
+    }
+    /* disabling the default search class*/
+    .search{
+        display: none;
+    }
+    /* enabling the search icon*/
+    .hidden-search{
+        display: flex;
+    }
+    /*nav items to take 75% of width*/
+    .nav-items{
+        width: 75%;
+    }
+    /*disabling the center name*/
+    .logo-name{
+        display: none;
+    }
+ }
+
+ /* class to hide the hidden search icon when clicked on it*/
+ .hidden-search-hide{
+    display: none;
+}
+/* class to hide the navigation list items when the search is active*/
+.hide-nav-items{
+    display: none;
+}
+
+/* another search input when clicked on the search icon at screen size less than 780px*/
+.media-search{
+    display: none;
+    align-items: center;
+    margin: 2px 2px 2px 2px;
+    width: 300px;
+    margin-left: 10px;
+    background-color: rgba(141, 181, 201, 0.1);
+    border: 1px transparent;
+    border-radius: 8px;
+}
+
+/* icon inside the media-search input*/
+.media-search img{
+    margin: 3px 5px 2px 10px;
+    max-height: 60%;
+    max-width: 20%;
+    cursor: pointer;
+}
+
+/* input of the media-search */
+.media-search input[type="text"]{
+    font-size: 1em;
+    border: none;
+    background-color: transparent;
+}
+
+/* enabling the media search when clicked on the hidden search icon*/
+.media-search-show{
+    display: flex;
+}
+
+/* giving the logo-search a width of 80%*/
+.nav-bar .logo-search-width{
+    width: 80%
+}
+
+/* when user reset the screen size to 780px reseting the view*/
+@media only screen and (min-width:780px){
+    .nav-bar .logo-search-width{
+        width: 40% /*i.e. making the width again to 40%*/ /*resert 60->40*/
+    }
+    .hide-nav-items{
+        display: flex; /* nav items again start showing*/
+    }
+    .media-search{
+        display: none; /*default media search again start showing*/
+    }
+ }
+
+ /* media queries when the screen size is very smaller*/
+ @media only screen and (max-width:430px){
+    .media-search{
+        width: 250px;
+    }
+    /* showing the list items close to one another*/
+    .nav-items ul li{ 
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+ }
+
+ .middle-container{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    /* border: 1px solid #000; */
+}
+
+.navitems-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+ /* iframe{
+     opacity: 1;
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+ } */
