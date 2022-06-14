@@ -1,3 +1,36 @@
+# Redapt
+## Simulating social Media with PureJS
+### This project utilizes Java Springboot and Pure javascript (ES6)
+
+![Redapt](https://github.com/gittyvarshney/Redapt/blob/main/redapt_bg.png?raw=true)
+
+## Frontend:
+FrontEnd is based on Pure JS (ES6), No Helper library is used and all logic is implemented just by using the core concepts </br> 
+It consist's of 8 files which you can assess in frontend directory
+
+![FE Files](https://github.com/gittyvarshney/Redapt/blob/main/redapt_fe_1.png?raw=true)
+
+### Design:
+
+![FE Design](https://github.com/gittyvarshney/Redapt/blob/main/redapt_fe_2.png?raw=true)
+
+## Backend:
+The Baackend is implemented in Java 8 using the spring boot library in order to communicate with the database and manage the corresponding API’s
+
+![BE Files](https://github.com/gittyvarshney/Redapt/blob/main/redapt_be_1.png?raw=true)
+
+### Database:
+PSQL Database is used in storing the information in accordance with the technology used there, it is consists of five schemas with their primary and foreign keys
+
+![Database](https://github.com/gittyvarshney/Redapt/blob/main/redapt_be_2.png?raw=true)
+
+
+
+
+###
+
+
+
 # Setting up the Backend
 - First Start the Intellij IDE 
 - Then Click on the File Menu > New Project > Spring Initializer 
